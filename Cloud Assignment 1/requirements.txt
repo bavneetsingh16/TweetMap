@@ -1,0 +1,12 @@
+certifi==2017.7.27.1
+chardet==3.0.4
+Django==1.9.12
+elasticsearch==5.4.0
+Flask==0.10.1
+idna==2.6
+itsdangerous==0.24
+Jinja2==2.9.6
+MarkupSafe==1.0
+requests==2.18.4
+urllib3==1.22
+Werkzeug==0.12.2
