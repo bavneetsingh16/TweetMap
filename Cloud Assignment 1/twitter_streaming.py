@@ -20,15 +20,15 @@ from boto.sqs.message import Message
 
 #sqs = boto3.resource('sqs')
 #queue = sqs.get_queue_by_name(QueueName='second2.fifo')
-access_token = "584690112-n686q3fc71XC7EgafNGyEbYm01lJpQbBG3VBOJTf"
-access_secret = "i99cKHsiiZ9Ot1tv3xPdQQEqnE5h5Flg7fNOEEsazptms"
-consumer_key = "Q4sNf8IYKmWE8LroK29L71zhV"
-consumer_secret = "YBRbNZVvopSc3IEljWIzi5kyQDfCn0bFk1Y0dyqHuB75ZCQaPv"
+access_token = ""
+access_secret = ""
+consumer_key = ""
+consumer_secret = ""
 
 host = 'search-twitterdata-7pjdmgnouvfgjif4lryzj3pgdi.us-east-1.es.amazonaws.com'
 
-aws_id ='AKIAJTFJ3XU7WYQTLSPA'
-aws_key= '1YJR3KnIgiWSS+WWWfg4TdsxpxrMNHSNsiKjqAI/'
+aws_id =''
+aws_key= ''
 auth = AWSRequestsAuth(aws_access_key=aws_id,
                        aws_secret_access_key=aws_key,
                        aws_host=host,
@@ -46,8 +46,8 @@ client = Elasticsearch(
 )
 '''client2 = boto3.client(
     "sns",
-    aws_access_key_id="AKIAJTFJ3XU7WYQTLSPA",
-    aws_secret_access_key="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",
+    aws_access_key_id="",
+    aws_secret_access_key="",
     region_name="us-east-1"
 )'''
 #topic_arn = 'arn:aws:sns:us-east-1:727407189833:notifications'
