@@ -1,0 +1,42 @@
+{
+  "Comment": "A simple example of the Steps language using an AWS Lambda Function",
+  "StartAt": "Parallel",
+
+  "States": {
+    
+
+    "Parallel": {
+      "Type": "Parallel",
+      "Next": "Final State",
+      "Branches": [
+        {
+          "StartAt": "p1",
+          "States": {
+            "p1": {
+                  "Type": "Task",
+                  "Resource": "arn:aws:lambda:us-east-1:727407189833:function:tweepytosqs",
+              "End": true
+            }
+          }
+        },
+
+        {
+          "StartAt": "p2",
+          "States": {
+            "p2": {
+                  "Type": "Task",
+                  "Resource": "arn:aws:lambda:us-east-1:727407189833:function:SqstoSns",
+              "End": true
+            }
+          }
+        }
+      ]
+    },
+    "Final State": {
+      "Type": "Pass",
+      "End": true
+    }
+
+    
+  }
+}
